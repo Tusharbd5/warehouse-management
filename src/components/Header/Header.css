@@ -1,0 +1,125 @@
+.header {
+    background-color: #2f3240;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+}
+
+.nav-items a {
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 50px;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-items a:hover {
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: cyan;
+    box-shadow: 0 0 5px #33ffff,
+        0 0 5px #66ffff;
+}
+
+.nav-toggle {
+    height: 32px;
+    width: 32px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    display: none;
+}
+
+.nav-toggle:focus {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+
+}
+
+.nav-toggle span {
+    height: 2px;
+    width: 100%;
+    background-color: #2f3240;
+    display: block;
+    margin: auto;
+    position: relative;
+}
+
+.nav-toggle span::after,
+.nav-toggle span::before {
+    position: absolute;
+    content: " ";
+    background-color: #2f3240;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav-toggle span::after {
+    transform: translateY(-6px);
+}
+
+.nav-toggle span::before {
+    transform: translateY(6px);
+}
+
+.sign-out {
+    margin-left: 20px;
+}
+
+.user-info {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width:710px) {
+    .header {
+        max-width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: block;
+        margin-left: 20px;
+        position: fixed;
+        top: 20px;
+    }
+
+    .nav-items.open {
+        height: auto;
+        visibility: visible;
+    }
+
+    .nav-items {
+        width: 100%;
+        display: block;
+        background-color: #2f3240;
+        text-align: left;
+        visibility: hidden;
+        height: 0;
+        padding-left: 20px;
+    }
+
+
+    .nav-items a {
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: 20px;
+        border-bottom: rgba(255, 255, 255, 0.2) 1px solid;
+        display: block;
+        margin: 0;
+        padding-top: 5px;
+    }
+}

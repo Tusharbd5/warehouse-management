@@ -1,9 +1,17 @@
 import './App.css';
+import Header from './components/Header/Header';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/pages/Home/Home/Home';
 
 function App() {
   return (
     <div className="App">
-      <h2 className='text-primary'>Here is the main app</h2>
+      <Header></Header>
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+      </Routes>
+
+
     </div>
   );
 }

@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Xiaomi Poco M4 5G",
+        "img": "https://i.ibb.co/M8wHWgr/poco-m4-5g-1.jpg",
+        "price": 295,
+        "description": "This is Xiaomi Poco M4 5G Which Type is IPS LCD, 90Hz, Size is 6.67 inches, 107.4 cm2 (~86.6% screen-to-body ratio)",
+        "supplier": "Mi Bangladesh"
+    },
+    {
+        "id": 2,
+        "name": "Xiaomi Poco X4 GT",
+        "img": "https://i.ibb.co/C1G8KDW/poco-x4-gt-1.jpg",
+        "price": 200,
+        "description": "This is Xiaomi Poco F4 Which Type IPS LCD, 144Hz, HDR10, Dolby Vision, 500 nits (typ), 650 nits (HBM), Size is 6.6 inches, 103.4 cm2 (~85.1% screen-to-body ratio)",
+        "supplier": "Mi Bangladesh"
+    },
+    {
+        "id": 3,
+        "name": "Xiaomi Poco F4 GT",
+        "img": "https://i.ibb.co/yn13BMZ/poco-f4-gt-1.jpg",
+        "price": 100,
+        "description": "This is Xiaomi Poco F4 GT Which Type IPS LCD, 90Hz, HDR10, Dolby Vision, 400 nits (typ), 700 nits (HBM), Size is 6.5 inches, 101.4 cm2 (~84.1% screen-to-body ratio)",
+        "supplier": "Mi Bangladesh"
+    },
+    {
+        "id": 4,
+        "name": "Xiaomi Poco F4",
+        "img": "https://i.ibb.co/zQgcVq2/poco-f4.jpg",
+        "price": 180,
+        "description": "This is Xiaomi Poco F4 Which Type AMOLED, 120Hz, HDR10+, Dolby Vision, 900 nits (HBM), 1300 nits (peak), Size is 6.67 inches, 107.4 cm2 (~86.6% screen-to-body ratio)",
+        "supplier": "Mi Bangladesh"
+    },
+    {
+        "id": 5,
+        "name": "Xiaomi Redmi 10 5G",
+        "img": "https://i.ibb.co/vJd1dVn/xiaomi-redmi-10-5g-03.jpg",
+        "price": 95,
+        "description": "This is Xiaomi Redmi 10 5G Which Type is IPS LCD, 90Hz, Size is 6.58 inches, 104.3 cm2 (~83.6% screen-to-body ratio)",
+        "supplier": "Mi Bangladesh"
+    },
+    {
+        "id": 6,
+        "name": "Xiaomi Redmi 10 Power",
+        "img": "https://i.ibb.co/JmYzrK9/xiaomi-redmi-10-power-05.jpg",
+        "price": 140,
+        "description": "This is Xiaomi Redmi 10 Power Which Type is IPS LCD, 400 nits (typ), Size is 6.7 inches, 106.2 cm2 (~81.7% screen-to-body ratio)",
+        "supplier": "Mi Bangladesh"
+    },
+    {
+        "id": 7,
+        "name": "Xiaomi Redmi 10C",
+        "img": "https://i.ibb.co/FWGXcjZ/redmi-10c-0.jpg",
+        "price": 140,
+        "description": "This is Xiaomi Redmi 10C Which Type is IPS LCD, Size is 6.71 inches, 106.5 cm2 (~82.0% screen-to-body ratio)",
+        "supplier": "Mi Bangladesh"
+    }
+]
