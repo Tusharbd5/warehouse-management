@@ -1,0 +1,24 @@
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    right: 150px;
+    bottom: 140px;
+}
+
+.middle-banner-text {
+    display: flex;
+    flex-direction: column;
+    left: 100px;
+    text-align: left;
+    color: black;
+}
+
+.banner-btn {
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+}

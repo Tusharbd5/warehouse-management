@@ -18,7 +18,7 @@ const Header = () => {
             </button>
             <div className='nav-items'>
                 <CustomLink to="/">Home</CustomLink>
-                <CustomLink to="/home#services">Services</CustomLink>
+                <CustomLink to="/home#inventory">Inventory</CustomLink>
                 <CustomLink to="/blogs">Blogs</CustomLink>
                 <CustomLink to="/about">About Us</CustomLink>
             </div>

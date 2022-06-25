@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import Item from '../../Item/Item';
+import Banner from '../Banner/Banner';
+import './Home.css'
 
 const Home = () => {
     const [items, setItems] = useState([]);
@@ -9,9 +12,13 @@ const Home = () => {
     }, [])
     return (
         <div>
-            {
-                items.map(item => <img src={item.img}></img>)
-            }
+            <Banner></Banner>
+            <div id='inventory' className='items'>
+                {
+                    items.slice(0, 6).map(item => <Item key={item._id}
+                        item={item}></Item>)
+                }
+            </div>
         </div>
     );
 };

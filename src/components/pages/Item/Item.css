@@ -1,0 +1,36 @@
+.item-img {
+    height: 350px;
+    width: 80%;
+}
+
+.item {
+    border-radius: 20px;
+    box-shadow: 0 0 10px lightgray;
+    margin-top: 20px;
+    padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.item p {
+    text-align: justify;
+}
+
+.item-price {
+    font-size: 40px;
+}
+
+@media screen and (max-width: 650px) {
+    .item-img {
+        width: 50%;
+        height: auto;
+    }
+
+    .item-price {
+        font-size: 30px;
+    }
+
+    .item h5 {
+        font-size: 14px;
+    }
+}
