@@ -1,0 +1,25 @@
+.single-item {
+    width: 60%;
+    box-shadow: 0 0 30px lightgray;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(127, 255, 212, 0.438);
+}
+
+.single-item img {
+    height: 400px;
+}
+
+.single-item p {
+    text-align: justify;
+}
+
+@media screen and (max-width:650px) {
+    .single-item img {
+        width: 80%;
+        height: auto;
+    }
+}

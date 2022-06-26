@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useProducts from '../../../../hooks/useProducts';
 import Item from '../../Item/Item';
 import Banner from '../Banner/Banner';
 import './Home.css'
 
 const Home = () => {
-    const [items, setItems] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/product')
-            .then(res => res.json())
-            .then(data => setItems(data))
-    }, [])
+    const [items] = useProducts();
     return (
         <div>
             <Banner></Banner>
