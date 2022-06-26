@@ -1,0 +1,39 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table thead {
+    background-color: #ee2828;
+}
+
+.table thead tr th {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    color: #FFFFFF;
+    padding: 10px;
+    vertical-align: top;
+    border: 1px solid #dee2e658;
+
+}
+
+.table tbody tr td {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.35px;
+    color: #f1f1f1;
+    background-color: #3c3f44;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #dee2e685;
+}
+
+.table tbody td button {
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 0 20px;
+    background-color: #ee2828;
+}

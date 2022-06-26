@@ -14,7 +14,7 @@ const Item = ({ item }) => {
             <img className='item-img' src={img} alt="" />
             <p>{description}</p>
             <h5>Supplier: {supplier}</h5>
-            <h6>Stock Quantity: {quantity}</h6>
+            <h6>Stock Quantity: {quantity ? quantity : "Sold Out"}</h6>
             <p style={{ textAlign: "center" }} className='item-price'>Price: {price}$</p>
 
             <button onClick={() => navigateItemDetails(_id)} className='btn btn-success'>Update</button>

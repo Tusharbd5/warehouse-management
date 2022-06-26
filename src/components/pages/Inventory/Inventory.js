@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import './Inventory.css';
 import { Form, Button } from 'react-bootstrap';
@@ -16,7 +16,7 @@ const Inventory = () => {
     }, [id])
     const handleDelivered = event => {
         event.preventDefault();
-        window.location.reload()
+        // window.location.reload()
 
         let quantity;
         let previousQuantity = product.quantity;
@@ -84,7 +84,7 @@ const Inventory = () => {
                 <h2>{product.name}</h2>
                 <img className='mb-3 mt-3' src={product.img} alt="" />
                 <h4>Price: {product.price}$</h4>
-                <h6>Quantity: {product.quantity}</h6>
+                <h6>Quantity: {product.quantity ? product.quantity : "Sold Out"}</h6>
                 <p style={{ textAlign: "center" }}>Supplier: {product.supplier}</p>
                 <p>{product.description}</p>
 
@@ -99,11 +99,13 @@ const Inventory = () => {
 
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
+                    <Button className='mb-3' variant="primary" type="submit">
                         restock
                     </Button>
                 </Form>
+                <Link className='link text-primary' to="/manage-inventory">Manage Inventories</Link>
             </div>
+
         </div>
     );
 };
