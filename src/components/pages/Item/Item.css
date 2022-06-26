@@ -6,10 +6,14 @@
 .item {
     border-radius: 20px;
     box-shadow: 0 0 10px lightgray;
-    margin-top: 20px;
     padding: 10px;
     width: 90%;
     margin: 0 auto;
+    transition: transform .2s;
+}
+
+.item:hover {
+    transform: scale(1.05);
 }
 
 .item p {

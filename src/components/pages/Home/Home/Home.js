@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div id='inventory' className='items'>
+            <div style={{ marginTop: '50px' }} id='inventory' className='items'>
                 {
                     items.slice(0, 6).map(item => <Item key={item._id}
                         item={item}></Item>)

@@ -9,6 +9,12 @@
     background-color: rgba(127, 255, 212, 0.438);
 }
 
+.quantity {
+    margin-top: 20px;
+    background-color: bisque;
+    padding: 20px;
+}
+
 .single-item img {
     height: 400px;
 }
