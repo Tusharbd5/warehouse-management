@@ -70,7 +70,7 @@ const Inventory = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    toast('Product successfully delevered');
+                    toast('Product Quantity Restocked');
                 })
             event.target.reset();
         }
