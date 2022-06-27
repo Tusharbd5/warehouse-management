@@ -28,8 +28,17 @@ const Header = () => {
                 <CustomLink to="/about">About Us</CustomLink>
 
                 {
+                    user &&
+                    <>
+                        <CustomLink to="/manage-inventory">Manage Items</CustomLink>
+                        <CustomLink to="/add-item">Add Items</CustomLink>
+                        <CustomLink to="/user-entry">My Items</CustomLink>
+                    </>
+                }
+
+                {
                     user ?
-                        <button onClick={() => { signOut(auth) }} className='btn btn-light me-4 sign-out'>Sign Out</button>
+                        <button onClick={() => { signOut(auth) }} className='btn btn-light me-4 sign-out'>Log Out</button>
                         :
                         <CustomLink to="/login">Login</CustomLink>
                 }

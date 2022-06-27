@@ -56,7 +56,7 @@ const Login = () => {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
     return (
-        <div className='container w-50'>
+        <div className='container w-50 mb-5'>
             <h1 className='text-primary mt-2 mb-4'>Please Login</h1>
 
             <Form onSubmit={handleSubmit}>

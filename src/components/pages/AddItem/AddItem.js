@@ -1,8 +1,12 @@
+import axios from 'axios';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import auth from '../../../firebase.init';
 
 const AddItem = () => {
+    const [user] = useAuthState(auth);
     const { register } = useForm();
 
     const handleSubmit = event => {
@@ -12,8 +16,9 @@ const AddItem = () => {
         const description = event.target.description.value;
         const price = event.target.price.value;
         const quantity = event.target.quantity.value;
+        const email = user.email;
 
-        const product = { name, img, description, price, quantity };
+        const product = { name, img, description, price, quantity, email };
 
         // Send data to server
 
@@ -29,10 +34,16 @@ const AddItem = () => {
                 toast('New Item Succesfully Inserted', result);
             })
 
-        console.log(description);
+        // Count users entry
+        axios.post('http://localhost:5000/user-entry', product)
+            .then(response => {
+                console.log('Entry Successful', response);
+                event.target.reset();
+            })
+
     };
     return (
-        <div>
+        <div className='mb-5'>
             <form className='mt-5' onSubmit={handleSubmit}>
                 <input className='mb-3 w-50' {...register("name", { required: true })} placeholder='Product name' /> <br />
 

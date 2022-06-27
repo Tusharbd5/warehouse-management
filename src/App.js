@@ -11,6 +11,8 @@ import AddItem from './components/pages/AddItem/AddItem';
 import Login from './components/pages/login/Login/Login';
 import SignUp from './components/pages/login/SignUp/SignUp';
 import RequireAuth from './components/pages/login/RequireAuth/RequireAuth';
+import Footer from './components/Footer/Footer';
+import UserEntry from './components/pages/UserEntry/UserEntry';
 
 function App() {
   return (
@@ -29,11 +31,16 @@ function App() {
           <ManageInventory></ManageInventory>
         </RequireAuth>}></Route>
 
+        <Route path='/user-entry' element={<RequireAuth>
+          <UserEntry></UserEntry>
+        </RequireAuth>}></Route>
+
         <Route path='/add-item' element={<AddItem></AddItem>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/sign-up' element={<SignUp></SignUp>}></Route>
       </Routes>
       <ToastContainer />
+      <Footer></Footer>
     </div>
   );
 }
