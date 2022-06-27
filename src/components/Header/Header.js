@@ -1,8 +1,13 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import CustomLink from '../CustomLink/CustomLink';
 import './Header.css';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+
     const handleToggle = () => {
         const items = document.querySelector('.nav-items');
         items.classList.toggle('open');
@@ -21,6 +26,13 @@ const Header = () => {
                 <CustomLink to="/home#inventory">Inventory</CustomLink>
                 <CustomLink to="/blogs">Blogs</CustomLink>
                 <CustomLink to="/about">About Us</CustomLink>
+
+                {
+                    user ?
+                        <button onClick={() => { signOut(auth) }} className='btn btn-light me-4 sign-out'>Sign Out</button>
+                        :
+                        <CustomLink to="/login">Login</CustomLink>
+                }
             </div>
         </nav>
     );

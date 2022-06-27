@@ -103,7 +103,9 @@ const Inventory = () => {
                         restock
                     </Button>
                 </Form>
-                <Link className='link text-primary' to="/manage-inventory">Manage Inventories</Link>
+
+                <Link className='fw-normal link text-white bg-success p-2 rounded-3' to="/manage-inventory">Manage Inventories</Link>
+
             </div>
 
         </div>
