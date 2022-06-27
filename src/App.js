@@ -13,6 +13,7 @@ import SignUp from './components/pages/login/SignUp/SignUp';
 import RequireAuth from './components/pages/login/RequireAuth/RequireAuth';
 import Footer from './components/Footer/Footer';
 import UserEntry from './components/pages/UserEntry/UserEntry';
+import NotFound from './components/pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
         <Route path='/add-item' element={<AddItem></AddItem>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/sign-up' element={<SignUp></SignUp>}></Route>
+
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer />
       <Footer></Footer>

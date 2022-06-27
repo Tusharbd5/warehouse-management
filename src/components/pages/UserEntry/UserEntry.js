@@ -10,15 +10,29 @@ const UserEntry = () => {
         const getEntry = async () => {
             const email = user.email;
             const url = `http://localhost:5000/user-entry?email=${email}`;
-            const { data } = await axios.get(url);
+            const { data } = await axios.get(url, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            });
             setEntry(data);
         }
         getEntry();
 
-    }, [])
+    }, [user])
     return (
         <div>
-            <h1>This is Users entry {entry.length}</h1>
+            {
+                entry.map(e => <div key={e._id} className='item w-50 mt-5 mb-5'>
+                    <h2>{e.name}</h2>
+                    <img className='item-img' src={e.img} alt="" />
+                    <p>{e.description}</p>
+                    <h5>Supplier: {e.supplier}</h5>
+                    <h6>Stock Quantity: {e.quantity ? e.quantity : "Sold Out"}</h6>
+                    <p style={{ textAlign: "center" }} className='item-price'>Price: {e.price}$</p>
+
+                </div>)
+            }
         </div>
     );
 };
