@@ -7,6 +7,8 @@ import Advertise from '../Advertise/Advertise';
 import Banner from '../Banner/Banner';
 import './Home.css';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Services from '../../Services/Services';
+
 
 const Home = () => {
     const [items] = useProducts();
@@ -25,6 +27,7 @@ const Home = () => {
             </div>
 
             <Advertise></Advertise>
+            <Services></Services>
         </div>
     );
 };

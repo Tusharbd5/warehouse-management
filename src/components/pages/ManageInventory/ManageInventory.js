@@ -13,7 +13,7 @@ const ManageInventory = () => {
     const handleRemove = id => {
         const proceed = window.confirm('Are You Sure to Delete?');
         if (proceed) {
-            fetch(`http://localhost:5000/product/${id}`, {
+            fetch(`https://morning-spire-56199.herokuapp.com/product/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())

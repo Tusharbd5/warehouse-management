@@ -14,6 +14,8 @@ import RequireAuth from './components/pages/login/RequireAuth/RequireAuth';
 import Footer from './components/Footer/Footer';
 import UserEntry from './components/pages/UserEntry/UserEntry';
 import NotFound from './components/pages/NotFound/NotFound';
+import Blogs from './components/pages/Blogs/Blogs';
+import About from './components/pages/About/About';
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
           <UserEntry></UserEntry>
         </RequireAuth>}></Route>
 
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='about' element={<About></About>}></Route>
         <Route path='/add-item' element={<AddItem></AddItem>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/sign-up' element={<SignUp></SignUp>}></Route>

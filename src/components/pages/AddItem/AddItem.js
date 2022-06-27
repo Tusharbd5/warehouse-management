@@ -16,13 +16,13 @@ const AddItem = () => {
         const description = event.target.description.value;
         const price = event.target.price.value;
         const quantity = event.target.quantity.value;
-        const email = user.email;
+        const email = user?.email;
 
         const product = { name, img, description, price, quantity, email };
 
         // Send data to server
 
-        fetch('http://localhost:5000/product', {
+        fetch('https://morning-spire-56199.herokuapp.com/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -35,7 +35,7 @@ const AddItem = () => {
             })
 
         // Count users entry
-        axios.post('http://localhost:5000/user-entry', product)
+        axios.post('https://morning-spire-56199.herokuapp.com/user-entry', product)
             .then(response => {
                 console.log('Entry Successful', response);
                 event.target.reset();
