@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Xiaomi Redmi Note 11T Pro",
+        "img": "https://i.ibb.co/P6KCvDJ/Xiaomi-Redmi-10-Prime-2022.jpg",
+        "description": "IPS LCD, 144Hz, HDR10, Dolby Vision, 650 nits (typ), 6.6 inches, 103.4",
+        "price": "80",
+        "quantity": "5",
+        "supplier": "Xiaomi"
+    },
+    {
+        "name": "xiaomi-redmi-note-11t-pro-plus",
+        "img": "https://i.ibb.co/8r3F3ht/xiaomi-redmi-note-11t-pro-plus-1.jpg",
+        "description": "IPS LCD, 144Hz, HDR10, Dolby Vision, 650 nits (typ), 6.6 inches, 103.4",
+        "price": "100",
+        "quantity": "2",
+        "supplier": "Xiaomi"
+    },
+    {
+        "name": "xiaomi-redmi-10-power",
+        "img": "https://i.ibb.co/JmYzrK9/xiaomi-redmi-10-power-05.jpg",
+        "description": "IPS LCD, 144Hz, HDR10, Dolby Vision, 650 nits (typ), 6.6 inches, 103.4",
+        "price": "120",
+        "quantity": "2",
+        "supplier": "Xiaomi"
+    },
+    {
+        "name": "xiaomi-redmi-10c",
+        "img": "https://i.ibb.co/FWGXcjZ/redmi-10c-0.jpg",
+        "description": "IPS LCD, 144Hz, HDR10, Dolby Vision, 650 nits (typ), 6.6 inches, 100.4",
+        "price": "150",
+        "quantity": "3",
+        "supplier": "Xiaomi"
+    },
+    {
+        "name": "xiaomi-poco-x4-gt-1",
+        "img": "https://i.ibb.co/C1G8KDW/poco-x4-gt-1.jpg",
+        "description": "IPS LCD, 144Hz, HDR10, Dolby Vision, 650 nits (typ), 6.6 inches, 55.56",
+        "price": "140",
+        "quantity": "3",
+        "supplier": "Xiaomi"
+    },
+    {
+        "name": "xiaomi-poco-f4",
+        "img": "https://i.ibb.co/zQgcVq2/poco-f4.jpg",
+        "description": "IPS LCD, 144Hz, HDR10, Dolby Vision, 650 nits (typ), 6.0 inches, 100.26",
+        "price": "140",
+        "quantity": "5",
+        "supplier": "Xiaomi"
+    },
+    {
+        "name": "Xiaomi-poco-f4-gt-1",
+        "img": "https://i.ibb.co/yn13BMZ/poco-f4-gt-1.jpg",
+        "description": "IPS LCD, 144Hz, HDR10, Dolby Vision, 650 nits (typ), 6.5 inches, 100.26",
+        "price": "110",
+        "quantity": "2",
+        "supplier": "Xiaomi"
+    }
+]

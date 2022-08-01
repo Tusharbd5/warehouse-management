@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../../firebase.init';
+import useToken from '../../../../hooks/useToken';
 import Loading from '../../shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
@@ -22,6 +23,7 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+    const [token] = useToken(user);
     const location = useLocation();
 
     const from = location.state?.from?.pathname || "/";
@@ -31,10 +33,6 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         await signInWithEmailAndPassword(email, password);
-
-        const { data } = await axios.post('https://morning-spire-56199.herokuapp.com/login', { email });
-        localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
     }
     const navigateToRegister = () => {
         navigate('/sign-up');
@@ -50,8 +48,8 @@ const Login = () => {
             toast("Please Enter The Email !!")
         }
     }
-    if (user) {
-        // navigate(from, { replace: true });
+    if (token) {
+        navigate(from, { replace: true });
     }
     if (loading) {
         return <Loading></Loading>

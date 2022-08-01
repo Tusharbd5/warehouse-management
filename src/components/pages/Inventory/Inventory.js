@@ -37,7 +37,7 @@ const Inventory = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    toast('Product successfully delevered');
+                    toast('Product successfully delevered', data);
                 })
         }
 
@@ -70,7 +70,7 @@ const Inventory = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    toast('Product Quantity Restocked');
+                    toast('Product Quantity Restocked', data);
                 })
             event.target.reset();
         }
@@ -86,7 +86,7 @@ const Inventory = () => {
                 <h4>Price: {product.price}$</h4>
                 <h6>Quantity: {product.quantity ? product.quantity : "Sold Out"}</h6>
                 <p style={{ textAlign: "center" }}>Supplier: {product.supplier}</p>
-                <p>{product.description}</p>
+                <p className='text-center'>{product.description}</p>
 
                 <button onClick={handleDelivered} className='btn btn-success'>Delivered</button>
             </div>

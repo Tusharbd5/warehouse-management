@@ -5,6 +5,7 @@ import auth from '../../../../firebase.init';
 import { Form, Button } from 'react-bootstrap';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../shared/Loading/Loading';
+import useToken from '../../../../hooks/useToken';
 
 const SignUp = () => {
     const emailRef = useRef('');
@@ -22,6 +23,7 @@ const SignUp = () => {
 
 
     const [updateProfile, updating, profileError] = useUpdateProfile(auth);
+    const [token] = useToken(user);
 
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
@@ -31,7 +33,6 @@ const SignUp = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         const name = nameRef.current.value;
-
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
@@ -44,7 +45,7 @@ const SignUp = () => {
     const navigateToLogin = () => {
         navigate('/login');
     }
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 

@@ -45,15 +45,15 @@ const AddItem = () => {
     return (
         <div className='mb-5'>
             <form className='mt-5' onSubmit={handleSubmit}>
-                <input className='mb-3 w-50' {...register("name", { required: true })} placeholder='Product name' /> <br />
+                <input className='mb-3 w-50' {...register("name")} placeholder='Product name' required /> <br />
 
-                <input className='mb-3 w-50' {...register("img", { required: true })} placeholder='Image Link' /> <br />
+                <input className='mb-3 w-50' {...register("img")} placeholder='Image Link' required /> <br />
 
-                <input style={{ height: 'calc(2.5em + 4.75rem + 2px)' }} className='mb-3 w-50' {...register("description")} placeholder='Description' /> <br />
+                <input style={{ height: 'calc(2.5em + 4.75rem + 2px)' }} className='mb-3 w-50' {...register("description")} placeholder='Description' required /><br />
 
                 <input className='mb-3 w-50' type="number" {...register("price")} placeholder="Price" /> <br />
 
-                <input className='mb-3 w-50' type="number" {...register("quantity")} placeholder="Quantity" /> <br />
+                <input className='mb-3 w-50' type="number" {...register("quantity")} placeholder="Quantity" required /> <br />
                 <input className='btn btn-dark' type="submit" />
             </form>
         </div>

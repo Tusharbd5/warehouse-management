@@ -21,7 +21,6 @@ const ManageInventory = () => {
                     toast('Product Successfully Deleted', data);
                 })
         }
-        window.location.reload();
     }
 
     const navigateAddItem = () => {
