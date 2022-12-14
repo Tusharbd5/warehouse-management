@@ -10,7 +10,7 @@ const Inventory = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`https://morning-spire-56199.herokuapp.com/product/${id}`)
+        fetch(`https://warehouse-management-jdvj.onrender.com/product/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id])
@@ -28,7 +28,7 @@ const Inventory = () => {
         if (quantity >= 0) {
             product.quantity = quantity;
 
-            fetch(`https://morning-spire-56199.herokuapp.com/product/${id}`, {
+            fetch(`https://warehouse-management-jdvj.onrender.com/product/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
@@ -61,7 +61,7 @@ const Inventory = () => {
             newQuantity = product.quantity + input;
             product.quantity = newQuantity;
 
-            fetch(`https://morning-spire-56199.herokuapp.com/product/${id}`, {
+            fetch(`https://warehouse-management-jdvj.onrender.com/product/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
