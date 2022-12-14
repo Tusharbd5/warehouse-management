@@ -9,7 +9,7 @@ const UserEntry = () => {
     useEffect(() => {
         const getEntry = async () => {
             const email = user?.email;
-            const url = `https://morning-spire-56199.herokuapp.com/user-entry?email=${email}`;
+            const url = `https://warehouse-management-jdvj.onrender.com/user-entry?email=${email}`;
             const { data } = await axios.get(url, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`

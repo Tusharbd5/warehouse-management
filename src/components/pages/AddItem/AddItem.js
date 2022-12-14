@@ -22,7 +22,7 @@ const AddItem = () => {
 
         // Send data to server
 
-        fetch('https://morning-spire-56199.herokuapp.com/product', {
+        fetch('https://warehouse-management-jdvj.onrender.com/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -35,7 +35,7 @@ const AddItem = () => {
             })
 
         // Count users entry
-        axios.post('https://morning-spire-56199.herokuapp.com/user-entry', product)
+        axios.post('https://warehouse-management-jdvj.onrender.com/user-entry', product)
             .then(response => {
                 console.log('Entry Successful', response);
                 event.target.reset();
